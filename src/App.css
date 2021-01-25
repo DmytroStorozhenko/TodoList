@@ -1,3 +1,4 @@
+/*
 .App {
   padding: 30px;
   display: flex;
@@ -30,6 +31,7 @@
 .taskItem {
   list-style: none;
 }
+*/
 
 .isDone {
   opacity: 0.5;
