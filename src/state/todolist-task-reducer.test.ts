@@ -1,6 +1,7 @@
-import {TasksStateType, TodolistType} from "../App";
 import {tasksReducer} from "./tasks-reducer";
 import {addTodolistAC, todolistsReducer} from "./todolists-reducer";
+import {TodolistType} from "../AppWithRedux";
+import {TasksStateType} from "../TodoList";
 
 test('ids should be equals', () => {
     const startTasksState: TasksStateType = {};
@@ -13,7 +14,7 @@ test('ids should be equals', () => {
 
     const keys = Object.keys(endTasksState);
     const idFromTasks = keys[0];
-    const idFromTodolists = endTodolistsState[0].id;
+    const idFromTodolists = endTodolistsState[0].todolistId;
 
     expect(idFromTasks).toBe(action.id);
     expect(idFromTodolists).toBe(action.id);
